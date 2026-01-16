@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const ConsultationCTA: React.FC = () => {
+const ConsultationCTA = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (email) {
         // Simulate API call

@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import SavingsCalculator from './components/SavingsCalculator';
-import ResultsDisplay from './components/ResultsDisplay';
-import SolarFeatures from './components/SolarFeatures';
-import ConsultationCTA from './components/ConsultationCTA';
-import { US_STATES, PANEL_WATTAGE, COST_PER_WATT, FEDERAL_TAX_CREDIT, INFLATION_RATE } from './constants';
-import { CalculationResult } from './types';
+import SavingsCalculator from './components/SavingsCalculator.js';
+import ResultsDisplay from './components/ResultsDisplay.js';
+import SolarFeatures from './components/SolarFeatures.js';
+import ConsultationCTA from './components/ConsultationCTA.js';
+import { US_STATES, PANEL_WATTAGE, COST_PER_WATT, FEDERAL_TAX_CREDIT, INFLATION_RATE } from './constants.js';
 
-const App: React.FC = () => {
-  const [billAmount, setBillAmount] = useState<number>(150); // Default $150
-  const [selectedState, setSelectedState] = useState<string>('');
-  const [results, setResults] = useState<CalculationResult | null>(null);
+const App = () => {
+  const [billAmount, setBillAmount] = useState(150); // Default $150
+  const [selectedState, setSelectedState] = useState('');
+  const [results, setResults] = useState(null);
 
   // Calculation Logic
   const calculateSolarData = useMemo(() => {

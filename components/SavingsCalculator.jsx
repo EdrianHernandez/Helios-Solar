@@ -1,32 +1,25 @@
 import React, { useCallback } from 'react';
-import { US_STATES } from '../constants';
+import { US_STATES } from '../constants.js';
 
-interface SavingsCalculatorProps {
-  billAmount: number;
-  selectedState: string;
-  onBillChange: (value: number) => void;
-  onStateChange: (value: string) => void;
-}
-
-const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({
+const SavingsCalculator = ({
   billAmount,
   selectedState,
   onBillChange,
   onStateChange,
 }) => {
   
-  const handleSliderChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSliderChange = useCallback((e) => {
     onBillChange(Number(e.target.value));
   }, [onBillChange]);
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = useCallback((e) => {
     const val = Number(e.target.value);
     if (!isNaN(val) && val >= 0) {
       onBillChange(val);
     }
   }, [onBillChange]);
 
-  const handleStateSelect = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleStateSelect = useCallback((e) => {
     onStateChange(e.target.value);
   }, [onStateChange]);
 

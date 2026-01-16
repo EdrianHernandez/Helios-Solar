@@ -1,8 +1,7 @@
-import { SolarState } from './types';
 import React from 'react';
 
 // Simplified data set for demonstration purposes
-export const US_STATES: SolarState[] = [
+export const US_STATES = [
   { name: 'Alabama', abbreviation: 'AL', avgSunHours: 4.5, costPerKwh: 0.14 },
   { name: 'Alaska', abbreviation: 'AK', avgSunHours: 2.5, costPerKwh: 0.24 },
   { name: 'Arizona', abbreviation: 'AZ', avgSunHours: 6.0, costPerKwh: 0.13 },

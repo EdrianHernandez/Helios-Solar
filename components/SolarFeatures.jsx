@@ -1,7 +1,6 @@
 import React from 'react';
-import { Feature } from '../types';
 
-const features: Feature[] = [
+const features = [
   {
     title: 'Federal Tax Credit',
     description: 'Claim 30% of your solar installation costs as a deduction on your federal taxes through the ITC.',
@@ -40,7 +39,7 @@ const features: Feature[] = [
   },
 ];
 
-const SolarFeatures: React.FC = () => {
+const SolarFeatures = () => {
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

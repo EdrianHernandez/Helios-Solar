@@ -1,0 +1,5 @@
+{
+  "name": "Helios Solar",
+  "description": "A modern, interactive solar energy calculator that estimates savings, panel requirements, and ROI based on location and usage.",
+  "requestFramePermissions": []
+}

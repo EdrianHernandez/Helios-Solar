@@ -1,11 +1,6 @@
 import React from 'react';
-import { CalculationResult } from '../types';
 
-interface ResultsDisplayProps {
-  results: CalculationResult | null;
-}
-
-const ResultCard: React.FC<{ title: string; value: string; subtext: string; icon: React.ReactNode; delay: string }> = ({ title, value, subtext, icon, delay }) => (
+const ResultCard = ({ title, value, subtext, icon, delay }) => (
   <div className={`savings-card group relative bg-white p-6 rounded-2xl shadow-lg border border-slate-100 overflow-hidden transform transition-all duration-700 hover:scale-[1.02] hover:shadow-xl animate-fade-in-up ${delay}`}>
     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
         {icon}
@@ -19,7 +14,7 @@ const ResultCard: React.FC<{ title: string; value: string; subtext: string; icon
   </div>
 );
 
-const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
+const ResultsDisplay = ({ results }) => {
   if (!results) {
     return (
       <div className="w-full max-w-4xl mx-auto mt-12 text-center p-12 bg-white rounded-2xl border-2 border-dashed border-slate-200">
@@ -32,7 +27,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
   }
 
   // Format currency
-  const formatMoney = (amount: number) => {
+  const formatMoney = (amount) => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount);
   };
 

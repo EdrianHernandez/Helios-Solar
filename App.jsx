@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import SavingsCalculator from './components/SavingsCalculator.js';
-import ResultsDisplay from './components/ResultsDisplay.js';
-import SolarFeatures from './components/SolarFeatures.js';
-import ConsultationCTA from './components/ConsultationCTA.js';
+import SavingsCalculator from './components/SavingsCalculator.jsx';
+import ResultsDisplay from './components/ResultsDisplay.jsx';
+import SolarFeatures from './components/SolarFeatures.jsx';
+import ConsultationCTA from './components/ConsultationCTA.jsx';
 import { US_STATES, PANEL_WATTAGE, COST_PER_WATT, FEDERAL_TAX_CREDIT, INFLATION_RATE } from './constants.js';
 
 const App = () => {
